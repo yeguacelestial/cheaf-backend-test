@@ -41,6 +41,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # Local
+    'user_crud',
+    'random_words',
+    'dist_between_coords'
 ]
 
 MIDDLEWARE = [
