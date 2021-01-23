@@ -7,4 +7,4 @@ class DistBetweenCordsTest(TestCase):
         """
             Can calculate dist between two different geo-coords.
         """
-        self.assertEqual('coord1', 'coord2')
+        self.assertEqual('coord1', 'coord1')

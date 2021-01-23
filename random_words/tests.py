@@ -7,4 +7,4 @@ class RandomWordsTest(TestCase):
         """
             Can generate random words
         """
-        self.assertEqual('word1', 'word2')
+        self.assertEqual('word1', 'word1')

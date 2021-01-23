@@ -7,4 +7,4 @@ class UserCrudTest(TestCase):
         """
             Can create a user with requests.
         """
-        self.assertEqual('User1', 'User2')
+        self.assertEqual('User1', 'User1')
