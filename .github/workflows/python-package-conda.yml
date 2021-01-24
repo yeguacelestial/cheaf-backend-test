@@ -3,15 +3,16 @@ name: Python Package using Conda
 on: [push]
 
 jobs:
+  env:
+    SECRET_KEY: ${{ secrets.SECRET_KEY }}
+    DEBUG: ${{ secrets.DEBUG }}
+
   build-linux:
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 5
 
     steps:
-    env:
-      SECRET_KEY: ${{ secrets.SECRET_KEY }}
-      DEBUG: ${{ secrets.DEBUG }}
     - uses: actions/checkout@v2
     - run: |
         git fetch --prune --unshallow
