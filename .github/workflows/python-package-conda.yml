@@ -2,10 +2,11 @@ name: Python Package using Conda
 
 on: [push]
 
+env:
+  SECRET_KEY: ${{ secrets.SECRET_KEY }}
+  DEBUG: ${{ secrets.DEBUG }}
+
 jobs:
-  env:
-    SECRET_KEY: ${{ secrets.SECRET_KEY }}
-    DEBUG: ${{ secrets.DEBUG }}
 
   build-linux:
     runs-on: ubuntu-latest
