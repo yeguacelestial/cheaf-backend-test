@@ -33,8 +33,12 @@ dependencies:
   - zlib=1.2.11=h7b6447c_3
   - pip:
     - asgiref==3.3.1
+    - dj-database-url==0.5.0
     - django==3.1.5
+    - django-heroku==0.3.1
+    - psycopg2==2.8.6
     - python-dotenv==0.15.0
     - pytz==2020.5
     - sqlparse==0.4.1
+    - whitenoise==5.2.0
 prefix: /home/rexcolt/miniconda3/envs/cheaf-backend-test
