@@ -1,4 +1,4 @@
-name: 'develop' workflow actions
+name: Run tests
 
 on:
   push:
