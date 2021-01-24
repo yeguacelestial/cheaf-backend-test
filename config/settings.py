@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # 3rd party
+    'rest_framework',
+
     # Local
     'user_crud',
     'random_words',
@@ -129,7 +132,13 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
+# Custom
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10,
+}
+
+# Configure Django App for Heroku.
 if 'HEROKU' in os.environ:
-    # Configure Django App for Heroku.
     import django_heroku
     django_heroku.settings(locals())
