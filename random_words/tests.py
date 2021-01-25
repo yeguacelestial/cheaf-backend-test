@@ -1,11 +1,12 @@
-from django.test import TestCase
+from rest_framework.test import APITestCase
 
 
-class RandomWordsTest(TestCase):
+class RandomWordsTest(APITestCase):
 
-    def test_can_generate_words(self):
+    def test_send_random_words(self):
         """
-            Can generate random words
+            Can send a list of random words, and can return the number of times
+            those appear on the list.
         """
         words = {
             "words": [
@@ -33,7 +34,6 @@ class RandomWordsTest(TestCase):
 
         response = self.client.post('/api/v1/random-words/', words)
         self.assertEqual(response.data, expected_response)
-    
 
     def test_send_less_than_ten_words(self):
         """
@@ -55,7 +55,6 @@ class RandomWordsTest(TestCase):
         response = self.client.post('/api/v1/random-words/', words)
         self.assertEqual(response.data, expected_response)
 
-    
     def test_send_more_than_ten_words(self):
         """
             Sends more than 10 words, and evaluates the response.
