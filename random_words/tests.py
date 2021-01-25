@@ -7,9 +7,6 @@ class RandomWordsTest(TestCase):
         """
             Can generate random words
         """
-<<<<<<< HEAD
-        self.assertEqual('word1', 'word1')
-=======
         words = {
             "words": [
                 "prescription",
@@ -86,4 +83,3 @@ class RandomWordsTest(TestCase):
 
         response = self.client.post('/api/v1/random-words/', words)
         self.assertEqual(response.data, expected_response)
->>>>>>> f4322b9... Handle random words endpoint

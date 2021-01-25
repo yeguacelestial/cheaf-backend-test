@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-from django.shortcuts import render
-
-# Create your views here.
-=======
 import json
 
 from rest_framework.views import APIView
@@ -46,4 +41,3 @@ class RandomWords(APIView):
             status_code = status.HTTP_400_BAD_REQUEST
 
         return Response(response, status_code)
->>>>>>> f4322b9... Handle random words endpoint
