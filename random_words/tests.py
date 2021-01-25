@@ -1,11 +1,8 @@
-from rest_framework import status
 from rest_framework.test import APITestCase
-
-import json
 
 
 class RandomWordsTest(APITestCase):
-    
+
     def test_send_random_words(self):
         """
             Can send a list of random words, and can return the number of times
@@ -37,7 +34,6 @@ class RandomWordsTest(APITestCase):
 
         response = self.client.post('/api/v1/random-words/', words)
         self.assertEqual(response.data, expected_response)
-    
 
     def test_send_less_than_ten_words(self):
         """
@@ -59,7 +55,6 @@ class RandomWordsTest(APITestCase):
         response = self.client.post('/api/v1/random-words/', words)
         self.assertEqual(response.data, expected_response)
 
-    
     def test_send_more_than_ten_words(self):
         """
             Sends more than 10 words, and evaluates the response.
