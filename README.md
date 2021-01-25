@@ -6,7 +6,7 @@ Desarrollo de API en Django que incluya lo siguiente:
 
 - [x] CRUD de usuarios
 - [x] Endpoint que reciba 10 palabras al azar (pueden repetirse) y regrese una lista con las palabras y el número de veces que aparecen en la lista
-- [ ] Endpoint que reciba 2 geo-coordenadas Lat-Long y regrese la distancia entre estos dos puntos
+- [x] Endpoint que reciba 2 geo-coordenadas Lat-Long y regrese la distancia entre estos dos puntos
 
 ### Deseable incluir
 - Django REST Framework

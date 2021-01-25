@@ -1,7 +1,8 @@
 from django.urls import path
 
-# from .views import test
+from dist_between_coords import views
+
 
 urlpatterns = [
-    # path('', test)
+    path('', views.DistBetweenCoords.as_view()),
 ]
