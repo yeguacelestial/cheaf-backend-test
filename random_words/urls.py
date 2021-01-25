@@ -1,7 +1,9 @@
-from django.urls import path
+from django.urls import path, include
+from rest_framework import routers
 
-# from .views import test
+from random_words import views
+
 
 urlpatterns = [
-    # path('', test)
+    path('', views.RandomWords.as_view()),
 ]
